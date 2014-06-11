@@ -15,3 +15,10 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('city', function(){
+	$visitor = Tracker::currentSession();
+	echo '<pre>';
+	var_dump( $visitor );
+	echo '</pre>';
+});

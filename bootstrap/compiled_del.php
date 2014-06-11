@@ -895,7 +895,6 @@ class EnvironmentDetector
         return str_is($name, gethostname());
     }
 }
-
 namespace Illuminate\Http;
 
 use Symfony\Component\HttpFoundation\ParameterBag;
