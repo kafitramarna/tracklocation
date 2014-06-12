@@ -23,9 +23,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'test_tracker_db',
-			'username'  => 'root',
-			'password'  => '123456',
+			'database'  => 'allwebp1_tracking',
+			'username'  => 'allwebp1_tracker',
+			'password'  => 'abc!@#',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -21,6 +21,8 @@ Route::get('city', function(){
 	echo '<pre>';
 	if($visitor->geoIp){
 		var_dump( $visitor->geoIp->city );
+	}else{
+		echo 'No track for this site...';
 	}
 	echo '</pre>';
 });
