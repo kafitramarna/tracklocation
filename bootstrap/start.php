@@ -29,12 +29,18 @@ $app = new Illuminate\Foundation\Application;
 	'local' => array('homestead'),
 
 ));*/
-$env = $app->detectEnvironment(
+
+/*$env = $app->detectEnvironment(
     array(
-         'local' 		=> 	array('http://localhost', '*.dev', 'Theavuth'), 
-         'production' 	=> 	array('allwebproject.com*', 'www.allwebproject.com*') 
+         'local' 		=> 	array('localhost', 'Theavuth'), 
+         'production' 	=> 	array('allwebproject.com', 'www.allwebproject.com*') 
     )
-);
+);*/
+
+$env = $app->detectEnvironment(function() use($app) {
+    return getenv('ENV') ?: ($app->runningInConsole() ? 'local' : 'production');
+});
+
 
 /*
 |--------------------------------------------------------------------------
