@@ -22,3 +22,23 @@ Route::get('city', function(){
 	var_dump( $visitor );
 	echo '</pre>';
 });
+
+Route::get('errors', function(){
+	$errors = Tracker::errors(60 * 24);
+	var_dump($errors);
+});
+
+Route::get('users', function(){
+	$users = Tracker::users(60 * 24);
+	var_dump($users);
+});
+
+Route::get('page', function(){
+	$pageViews = Tracker::pageViews(60 * 24 * 30);
+	var_dump($pageViews);
+});
+
+Route::get('cview', function(){
+	$pageViews = Tracker::pageViewsByCountry(60 * 24);
+	var_dump($pageViews);
+});
