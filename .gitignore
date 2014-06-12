@@ -1,5 +1,7 @@
 /bootstrap/compiled.php
-/app/config/database.php
+/app/config/database.php 
+/app/config/production/database.php
+/app/config/production/app.php
 composer.phar
 composer.lock
 .env.*.php

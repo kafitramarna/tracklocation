@@ -18,13 +18,11 @@ Route::get('/', function()
 
 Route::get('city', function(){
 	$visitor = Tracker::currentSession();
-	echo '<pre>';
 	if($visitor->geoIp){
 		var_dump( $visitor->geoIp->city );
 	}else{
 		echo 'No track for this site...';
 	}
-	echo '</pre>';
 });
 
 Route::get('errors', function(){
