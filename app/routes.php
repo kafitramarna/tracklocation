@@ -19,7 +19,9 @@ Route::get('/', function()
 Route::get('city', function(){
 	$visitor = Tracker::currentSession();
 	echo '<pre>';
-	var_dump( $visitor );
+	if($visitor->geoIp){
+		var_dump( $visitor->geoIp->city );
+	}
 	echo '</pre>';
 });
 
