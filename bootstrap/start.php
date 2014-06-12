@@ -29,16 +29,12 @@ $app = new Illuminate\Foundation\Application;
 	'local' => array('homestead'),
 
 ));*/
-$env = $app->detectEnvironment(array(
-  'local' => array('root-localhost'),
-  'staging' => array('your-staging-machine-name'),
-  'production' => array('www.allwebproject.com', 'allwebproject.com'),
-));
-
-$env = $app->detectEnvironment(function(){
-	// Default to local if LARAVEL_ENV is not set
-	return getenv('LARAVEL_ENV') ?: 'local';
-});
+$env = $app->detectEnvironment(
+    array(
+         'local' 		=> 	array('http://localhost', '*.dev', 'Theavuth'), 
+         'production' 	=> 	array('allwebproject.com*', 'www.allwebproject.com*') 
+    )
+);
 
 /*
 |--------------------------------------------------------------------------
